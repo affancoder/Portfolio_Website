@@ -337,6 +337,7 @@ footer {
   }
   .navbar-menu.active {
     display: flex;
+    transition: 0.2s;
   }
 
   .navbar-toggle {
