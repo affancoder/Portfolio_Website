@@ -30,6 +30,7 @@ nav ul li a {
 nav ul li a:hover {
   color: rgb(153, 153, 226);
   font-size: 1.01rem;
+  transition: all 0.2s;
 }
 .navbar-toggle {
   display: none;
@@ -231,10 +232,11 @@ footer {
 .heading {
   text-align: center;
   box-sizing: border-box;
-  margin: 30px;
-  height: 70px;
-  font-size: 2.5rem;
+  margin-top: 40px;
+  height: 220px;
+  font-size: 2.3rem;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .heading:hover {
   font-size: 2.6rem;
@@ -323,26 +325,37 @@ footer {
   color: white;
 }
 
+.school {
+  display: none;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   .navbar-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 0;
     width: 100%;
     background-color: #1e2167;
     z-index: 1;
+    text-align: center;
+    gap: 14px;
+  }
+  .navbar-menu li:hover {
+    border: 1px solid white;
   }
   .navbar-menu.active {
     display: flex;
-    transition: 0.2s;
   }
 
   .navbar-toggle {
     display: block;
     cursor: pointer;
+  }
+  .navbar .left {
+    font-size: 1.3rem;
   }
   .fa-list {
     font-size: 1.2rem;
@@ -391,6 +404,27 @@ footer {
   .image-top {
     display: none;
   }
+  .text-gray {
+    display: none;
+  }
+  .study h1 {
+    font-size: 20px;
+    margin-left: -65px;
+  }
+  .school {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    margin-top: -500px;
+    text-align: center;
+  }
+  .school .vertical-title .vertical-desc {
+    text-align: center;
+  }
+  .school .vertical-title {
+    margin-left: -22px;
+  }
   .h1 {
     font-size: 30px;
     margin-left: 32px;
@@ -430,9 +464,12 @@ footer {
     margin-top: 450px;
   }
 
+  .con-video {
+    flex-direction: column;
+  }
   .firstSec video {
     width: 90%;
-    height: 220px;
+    height: 320px;
     margin-left: -30px;
   }
 
