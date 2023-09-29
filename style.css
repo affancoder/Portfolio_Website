@@ -331,6 +331,11 @@ footer {
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .navbar-menu {
     display: none;
     flex-direction: column;
