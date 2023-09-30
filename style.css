@@ -155,7 +155,7 @@ main hr {
 }
 
 .skills {
-  height: 200vh;
+  height: 300vh;
 }
 .skills h2 {
   display: flex;
@@ -500,7 +500,7 @@ footer {
     margin-top: 450px;
   }
   .skills {
-    height: 350vh;
+    height: 500vh;
   }
   #skills-hr {
     display: flex;
