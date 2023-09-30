@@ -154,6 +154,40 @@ main hr {
   border-top-left-radius: 40px;
 }
 
+.skills {
+  height: 200vh;
+}
+.skills h2 {
+  display: flex;
+  justify-content: center;
+}
+.web-skills {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card {
+  width: 300px;
+  margin: 50px;
+  padding: 10px;
+  text-align: center;
+}
+.card:hover {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the image */
+.card img {
+  max-width: 100px;
+  height: 100px;
+}
+
+#skills-hr {
+  display: none;
+}
+
 footer {
   background-color: #0c0e1a;
   color: white;
@@ -348,13 +382,10 @@ footer {
     text-align: center;
     gap: 14px;
   }
-  .navbar-menu li:hover {
-    border: 1px solid white;
-  }
+
   .navbar-menu.active {
     display: flex;
   }
-
   .navbar-toggle {
     display: block;
     cursor: pointer;
@@ -468,7 +499,21 @@ footer {
     margin-left: 70px;
     margin-top: 450px;
   }
-
+  .skills {
+    height: 350vh;
+  }
+  #skills-hr {
+    display: flex;
+    background-color: rgb(166, 166, 202);
+  }
+  .skills img {
+    width: 50px;
+    height: 50px;
+  }
+  .skills .web-skills {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
   .con-video {
     flex-direction: column;
   }

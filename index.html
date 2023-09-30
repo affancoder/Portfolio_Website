@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Affan - Developer Portfolio</title>
+    <link rel="icon" href="assests/icon.png" class="rel" />
     <link rel="stylesheet" href="style.css" class="rel" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +16,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       class="rel"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -68,6 +73,70 @@
         </div>
       </section>
       <hr />
+
+      <section>
+        <div class="skills">
+          <h1 class="h1"><i class="ri-stack-fill"></i> Skills</h1>
+          <h2>Programming Language</h2>
+          <hr id="skills-hr" />
+          <div class="web-skills">
+            <div class="card">
+              <img src="assests/c.png" alt="Card Image" />
+              <h2>C</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/c++.png" alt="Card Image" />
+              <h2>C++</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/python.png" alt="Card Image" />
+              <h2>PYTHON</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/java.png" alt="Card Image" />
+              <h2>JAVA</h2>
+              <p></p>
+            </div>
+          </div>
+          <h2>Frontend Web Development</h2>
+          <hr id="skills-hr" />
+          <div class="web-skills">
+            <div class="card">
+              <img src="assests/html.png" alt="Card Image" />
+              <h2>HTML</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/css.png" alt="Card Image" />
+              <h2>CSS</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/javascript.png" alt="Card Image" />
+              <h2>JAVASCRIPT</h2>
+              <p></p>
+            </div>
+          </div>
+          <h2>DataBase</h2>
+          <hr id="skills-hr" />
+          <div class="web-skills">
+            <div class="card">
+              <img src="assests/sql.png" alt="" />
+              <h2>SQL</h2>
+              <p></p>
+            </div>
+            <div class="card">
+              <img src="assests/mongodb.png" alt="" />
+              <h2>MONGODB</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
       <section class="secondSection">
         <span class="text-gray">What i have done so far</span>
         <h1 class="study">
@@ -106,12 +175,12 @@
         <div class="school">
           <div class="vertical-title">Kankinara Central School</div>
           <div class="vertical-desc">Class - Nursery to V (2006-2014)</div>
-          <br>
+          <br />
           <div class="vertical-title">H.C.K Jain Vidyalaya</div>
-            <div class="vertical-desc">
-              Secondary Education Class - VI to X (2015-2019)
-            </div>
-          <br>
+          <div class="vertical-desc">
+            Secondary Education Class - VI to X (2015-2019)
+          </div>
+          <br />
           <div class="vertical-title">
             Kankinara Himayatul Ghurba High School
           </div>
@@ -200,7 +269,11 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed("#element", {
-        strings: ["Full Stack Web Developer", "Programmer", "Web Designer"],
+        strings: [
+          "Full Stack Web Developer",
+          "Programmer",
+          "Responsive Web Designer",
+        ],
         typeSpeed: 50,
       });
     </script>
