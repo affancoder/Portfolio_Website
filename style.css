@@ -180,7 +180,7 @@ main hr {
 
 /* Style for the image */
 .card img {
-  max-width: 100px;
+  max-width: 200px;
   height: 100px;
 }
 
@@ -412,6 +412,7 @@ footer {
   .leftSection .buttons {
     display: flex;
     margin-left: -80px;
+    align-items: center;
   }
   .rightSection img {
     width: 180px;
@@ -420,7 +421,7 @@ footer {
   .btn1,
   .btn2,
   .btn3 {
-    font-size: 15px;
+    font-size: 16px;
     width: 100px;
     margin: 5px;
     display: flex;
@@ -500,15 +501,19 @@ footer {
     margin-top: 450px;
   }
   .skills {
-    height: 500vh;
+    height: 600vh;
   }
   #skills-hr {
     display: flex;
     background-color: rgb(166, 166, 202);
   }
   .skills img {
-    width: 50px;
-    height: 50px;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+  }
+  #express {
+    width: 170px;
   }
   .skills .web-skills {
     flex-wrap: wrap;
