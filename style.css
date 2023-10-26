@@ -155,7 +155,8 @@ main hr {
 }
 
 .skills {
-  height: 300vh;
+  /* height: 300vh; */
+  height: auto;
 }
 .skills h2 {
   display: flex;
@@ -276,6 +277,29 @@ footer {
   font-size: 2.6rem;
   color: gray;
   transition: ease-in 0.2s;
+}
+
+/* services */
+
+.service-heading {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid seashell;
+  padding: 50px;
+  background-color: #05072e;
+}
+
+.card p {
+  margin-top: 10px;
 }
 
 /* Projects */
@@ -445,9 +469,10 @@ footer {
   .text-gray {
     display: none;
   }
-  .study h1 {
+  .study i{
     font-size: 20px;
-    margin-left: -65px;
+    display: flex;
+    justify-content: center;
   }
   .school {
     height: 500px;
@@ -502,7 +527,7 @@ footer {
     margin-top: 450px;
   }
   .skills {
-    height: 600vh;
+    height: 1150vh;
   }
   #skills-hr {
     display: flex;
@@ -532,6 +557,14 @@ footer {
   .certificate img {
     width: 290px;
     height: 220px;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+  .card {
+    height: 320px;
+    width: 180px;
   }
 
   footer {
