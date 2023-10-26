@@ -469,7 +469,7 @@ footer {
   .text-gray {
     display: none;
   }
-  .study i{
+  .study i {
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -527,7 +527,7 @@ footer {
     margin-top: 450px;
   }
   .skills {
-    height: 1150vh;
+    height: auto;
   }
   #skills-hr {
     display: flex;
@@ -562,9 +562,9 @@ footer {
   .service-container {
     flex-direction: column;
   }
-  .card {
-    height: 320px;
-    width: 180px;
+  .service-container .card {
+    height: auto;
+    width: auto;
   }
 
   footer {
