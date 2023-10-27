@@ -217,7 +217,7 @@ footer {
 }
 .footer-third ul {
   display: flex;
-  margin-left: 1100px;
+  margin-left: 1050px;
   margin-top: -35px;
   gap: 17px;
   font-size: 2.2rem;
@@ -292,9 +292,9 @@ footer {
   justify-content: center;
 }
 
-.card {
+.card1 {
   border: 2px solid seashell;
-  padding: 50px;
+  padding: 0 1rem 1rem 1rem;
   background-color: #05072e;
 }
 
