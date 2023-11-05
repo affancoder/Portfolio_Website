@@ -35,7 +35,8 @@
       @media (max-width: 600px) {
         #map {
           width: 70%;
-          height: 370px;
+          height: 350px;
+          border: 3px solid rgb(130, 127, 127);
         }
       }
     </style>
@@ -116,6 +117,10 @@
         const marker2 = new mapboxgl.Marker({ color: "red" })
           .setLngLat([88.401445, 22.865637])
           .addTo(map);
+        // Add a scale control to the map
+        map.addControl(new mapboxgl.ScaleControl());
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
       </script>
     </section>
 
