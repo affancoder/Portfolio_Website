@@ -196,6 +196,15 @@ main hr {
   display: none;
 }
 
+.web-skills a {
+  text-decoration: none;
+  color: white;
+}
+
+.web-skills .card:hover {
+  border: none;
+}
+
 footer {
   background-color: #0c0e1a;
   color: white;
@@ -408,10 +417,11 @@ footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #1e2167;
+    background-color: #0a0a55;
     z-index: 1;
     text-align: center;
-    gap: 14px;
+    gap: 34px;
+    height: 45%;
   }
 
   .navbar-menu.active {
@@ -486,7 +496,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin-left: 65px;
-    margin-top: -500px;
+    margin-top: -600px;
     text-align: center;
   }
   .school .vertical-title .vertical-desc {
