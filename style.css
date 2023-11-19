@@ -202,7 +202,7 @@ main hr {
   color: white;
 }
 
-.web-skills .card:hover {
+.card1:hover {
   border: none;
 }
 
@@ -570,6 +570,10 @@ footer {
     width: 90%;
     height: 320px;
     margin-left: -30px;
+  }
+
+  .con-video .content {
+    margin-bottom: 70px;
   }
 
   .certificate img {
