@@ -5,6 +5,7 @@
 body::-webkit-scrollbar {
   display: none;
 }
+HTML,
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -402,7 +403,6 @@ footer {
 .school {
   display: none;
 }
-
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
