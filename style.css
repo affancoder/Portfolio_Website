@@ -330,7 +330,7 @@ footer {
 .secondSec {
   color: white;
   margin-left: 838px;
-  margin-top: 19px;
+  margin-top: -55px;
   padding: 10px;
   width: 420px;
 }
@@ -541,8 +541,9 @@ footer {
     flex-direction: column;
     width: 240px;
     font-size: 12px;
-    margin-left: 70px;
-    margin-top: 450px;
+    margin-left: 50px;
+    margin-top: 440px;
+    height: auto;
   }
   .skills {
     height: auto;
