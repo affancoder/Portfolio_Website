@@ -404,6 +404,18 @@ footer {
   display: none;
 }
 
+.strength {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 150px;
+  gap: 40px;
+}
+
+.thirdSection img {
+  width: 90px;
+  border-radius: 50%;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   HTML,
@@ -448,9 +460,10 @@ footer {
 
   .leftSection {
     flex-direction: column;
-    font-size: 20px;
+    font-size: 22px;
     width: 100%;
-    margin-top: -50px;
+    margin-top: -60px;
+    height: auto;
   }
   .leftSection .buttons {
     display: flex;
@@ -466,7 +479,7 @@ footer {
   .btn3 {
     font-size: 16px;
     width: 100px;
-    margin: 5px;
+    margin: 8px;
     display: flex;
     justify-content: center;
   }
@@ -588,6 +601,10 @@ footer {
   .service-container .card {
     height: auto;
     width: auto;
+  }
+
+  .strength {
+    margin-left: -95px;
   }
 
   footer {
