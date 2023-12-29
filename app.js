@@ -6,3 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarMenu.classList.toggle("active");
   });
 });
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
