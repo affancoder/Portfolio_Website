@@ -291,9 +291,7 @@ footer {
   transition: all 0.5s;
 }
 .heading:hover {
-  font-size: 2.6rem;
-  color: gray;
-  transition: ease-in 0.2s;
+  color: rgb(85, 84, 84);
 }
 
 /* services */
@@ -439,6 +437,7 @@ footer {
 
   .navbar-menu.active {
     display: flex;
+    transition: all 0.2s;
   }
   .navbar-toggle {
     display: block;
@@ -454,25 +453,22 @@ footer {
     flex-direction: column;
   }
 
-  .firstSection {
-    flex-direction: column;
-  }
-
   .leftSection {
     flex-direction: column;
-    font-size: 22px;
-    width: 100%;
+    font-size: 20px;
+    width: 100% !important;
     margin-top: -60px;
-    height: auto;
+    margin-left: 100px;
   }
   .leftSection .buttons {
     display: flex;
-    margin-left: -80px;
+    margin-left: -18px;
     align-items: center;
+    width: 80px;
   }
   .rightSection img {
-    width: 180px;
-    margin-left: -50px;
+    width: 250px;
+    margin-left: -75px;
   }
   .btn1,
   .btn2,
@@ -527,18 +523,18 @@ footer {
     flex-direction: column;
   }
   .leftSection img {
-    height: 400px;
-    width: 300px;
-    margin-left: -90px;
-    margin-top: -50px;
+    height: 380px;
+    width: 280px;
+    margin-left: -10px;
+    margin-top: auto;
   }
 
   .he .colbox {
-    justify-content: center;
+    /* text-align: center; */
     height: 400px;
-    width: 160px;
-    margin-top: 50px;
-    margin-left: -60px;
+    width: 213px;
+    margin-top: 30px;
+    margin-left: -95px;
   }
 
   #rs form {
@@ -548,6 +544,11 @@ footer {
 
   #hr {
     width: 100%;
+  }
+
+  main hr {
+    width: 280px;
+    margin-left: 40px;
   }
 
   .secondSec {
@@ -603,6 +604,11 @@ footer {
     width: auto;
   }
 
+  .thirdSection h1 {
+    text-align: center;
+    margin-left: auto;
+  }
+
   .strength {
     margin-left: -95px;
   }
@@ -611,7 +617,7 @@ footer {
     background-color: black;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 400px;
+    height: 315px;
   }
   .footer-first {
     font-size: 14px;
