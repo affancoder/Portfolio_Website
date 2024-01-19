@@ -264,21 +264,21 @@ footer {
 /* About */
 
 .certificate img {
-  border: 4px solid rgb(159, 152, 152);
+  border: 4px solid rgb(130, 126, 126);
   height: 420px;
   width: 600px;
   margin: 30px;
-
   padding: 1px;
   border-radius: 14px;
   display: inline;
   justify-content: center;
+  border-style: ridge;
 }
 
 .certificate img:hover {
   cursor: zoom-in;
   transform: scale(1.1);
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .heading {
@@ -437,7 +437,6 @@ footer {
 
   .navbar-menu.active {
     display: flex;
-    transition: all 0.2s;
   }
   .navbar-toggle {
     display: block;
@@ -611,6 +610,16 @@ footer {
 
   .strength {
     margin-left: -95px;
+  }
+
+  .heading:hover {
+    color: white;
+    transition: 0.5s;
+  }
+
+  .card {
+    width: 300px !important;
+    margin-left: 6%;
   }
 
   footer {
