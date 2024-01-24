@@ -486,11 +486,29 @@ footer {
   .secondSection .study {
     font-size: 25px;
   }
-  .box .vertical {
-    display: none;
+  .box {
+    /* display: none; */
+    flex-direction: column;
   }
+
+  .secondSection .vertical {
+    height: auto;
+    margin: 10px;
+  }
+
+  .vertical-title,
+  .vertical-desc {
+    left: 20px;
+    top: -20px;
+  }
+
+  .secondSection .box {
+    width: 80vw;
+  }
+
   .image-top {
-    display: none;
+    /* display: none; */
+    height: auto;
   }
   .text-gray {
     display: none;
@@ -507,6 +525,7 @@ footer {
     margin-left: 65px;
     margin-top: -600px;
     text-align: center;
+    display: none;
   }
   .school .vertical-title .vertical-desc {
     text-align: center;
@@ -621,6 +640,8 @@ footer {
     width: 300px !important;
     margin-left: 6%;
   }
+
+  /* --------------------footer------------------ */
 
   footer {
     background-color: black;
