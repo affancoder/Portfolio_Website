@@ -125,7 +125,8 @@ main hr {
   height: 93px;
   width: 1px;
   background-color: white;
-  margin: 0 155px;
+  margin: 0 150px;
+  /* margin: 0 6vw; */
 }
 
 .image-top {
@@ -187,7 +188,7 @@ main hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the image */
+/* -------------Style for the image-------------- */
 .card img {
   max-width: 200px;
   height: 100px;
@@ -205,6 +206,8 @@ main hr {
 .card1:hover {
   border: none;
 }
+
+/* --------------------footer-------------- */
 
 footer {
   background-color: #0c0e1a;
