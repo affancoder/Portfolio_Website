@@ -207,6 +207,26 @@ main hr {
   border: none;
 }
 
+/* -----------------visitor panel------------ */
+
+.visitor-panel {
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  font-size: 1.2rem;
+}
+
+#count {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+div#count {
+  margin: 20px;
+  background-color: rgb(170, 167, 167);
+}
+
 /* --------------------footer-------------- */
 
 footer {
