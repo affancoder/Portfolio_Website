@@ -437,7 +437,8 @@ footer {
   border-radius: 50%;
 }
 
-/* Media query for mobile devices */
+/* ------------------------Media query for mobile devices---------------------- */
+
 @media (max-width: 600px) {
   HTML,
   body {
@@ -630,6 +631,7 @@ footer {
 
   .con-video .content {
     margin-bottom: 70px;
+    height: auto;
   }
 
   .certificate img {
