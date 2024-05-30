@@ -42,11 +42,6 @@ Thank you for visiting my portfolio repository!
 ## 🚀 About Me
 I'm a full stack developer...
 
-
-## 🛠 Skills
-HTML, CSS and Javascript
-
-
 ## Authors
 
 - [@affancoder](https://github.com/affancoder)
