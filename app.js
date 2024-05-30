@@ -5,8 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
   menuToggle.addEventListener("click", function () {
     navbarMenu.classList.toggle("active");
   });
+  function toggleNavbar() {
+    var x = document.getElementById("myNavbar");
+    var toggleButton = document.getElementsByClassName(".navbar-menu");
+
+    if (x.className === "navbar") {
+      x.className += " responsive";
+      toggleButton.innerHTML = "&#10006; Close"; // Change to close icon
+    } else {
+      x.className = "navbar";
+      toggleButton.innerHTML = "&#9776; Menu"; // Change back to menu icon
+    }
+  }
 });
 
-document.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
-});
+// -----------Right click disable code ---------
+
+// document.addEventListener("contextmenu", function (e) {
+//   e.preventDefault();
+// });
+
