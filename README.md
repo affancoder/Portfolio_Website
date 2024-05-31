@@ -30,7 +30,20 @@ Ensuring seamless communication, a 'Contact' page provides various channels for 
 
 In summary, my personal portfolio website is more than just a digital resume – it's a testament to my dedication to both form and function. Through a harmonious blend of HTML, CSS, and JavaScript, this project encapsulates my professional journey, aspirations, and capabilities, inviting visitors to explore and engage with the narrative I've woven into this digital space.
 
-Contact
+## Screenshots
+
+![1](https://github.com/affancoder/Portfolio_Website/assets/113276865/f3c59682-fb8e-4c5e-af43-a6f7ed648dbf)
+![2](https://github.com/affancoder/Portfolio_Website/assets/113276865/9c2fc5ec-e71d-44c7-8c61-a261218ec300)
+![3](https://github.com/affancoder/Portfolio_Website/assets/113276865/8c510e0f-1580-4adf-ae1a-b77826a512fd)
+![4](https://github.com/affancoder/Portfolio_Website/assets/113276865/54063c21-829b-46a3-831c-facae154e7ae)
+![5](https://github.com/affancoder/Portfolio_Website/assets/113276865/fb7867e7-aa4c-4d11-bea4-34cc5adb6a77)
+![6](https://github.com/affancoder/Portfolio_Website/assets/113276865/4fce94f7-110c-4666-ac10-df866564cfd7)
+![7](https://github.com/affancoder/Portfolio_Website/assets/113276865/1e9c5ebe-10fe-4041-82c3-49b28db74139)
+![8](https://github.com/affancoder/Portfolio_Website/assets/113276865/f0aa1f0b-7f93-4bf4-9d23-f18bdc4f1c3c)
+![9](https://github.com/affancoder/Portfolio_Website/assets/113276865/e243c597-df7b-4257-8826-2849e1d370ea)
+
+
+## Contact
 Feel free to get in touch with me for any queries or opportunities.
 
 Email: affanasgar8@gmail.com
