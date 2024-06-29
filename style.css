@@ -706,6 +706,17 @@ footer {
     margin-left: 6%;
   }
 
+  /* Contact */
+
+  .form-group input{
+    width: 90% !important;
+  }
+  
+  textarea {
+    width: 90% !important;
+    /* background: red !important; */
+  }
+
   /* --------------------footer------------------ */
 
   footer {
