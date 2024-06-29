@@ -326,7 +326,7 @@ footer {
   color: rgb(85, 84, 84);
 }
 
-/* ----------------------services----------------- */
+/* ---------------------- Services ----------------- */
 
 .service-heading {
   margin-top: 10px;
@@ -337,16 +337,40 @@ footer {
 .service-container {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
-.card1 {
-  border: 2px solid seashell;
-  padding: 0 1rem 1rem 1rem;
-  background-color: #05072e;
+#service-card{
+  height: 320px;
+  width: 360px;
+  border: none;
+  margin: 20px;
 }
 
-.card p {
-  margin-top: 10px;
+#service-card img{
+  width: 140px;
+  height: 100px;
+  position: relative;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#service-card h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+#service-card p{
+  margin-top: 14px;
+}
+
+#service-card:hover{
+  background-color: rgb(27, 146, 140);
+  transition: 0.4s;
+  border: none;
 }
 
 /* -------------------Projects----------------- */
