@@ -673,12 +673,18 @@ footer {
     height: 220px;
   }
 
+  /* Service */
+
   .service-container {
     flex-direction: column;
   }
-  .service-container .card {
+  /* .service-container .card {
     height: auto;
     width: auto;
+  } */
+
+  #service-card{
+    width: 80%;
   }
 
   .thirdSection h1 {
