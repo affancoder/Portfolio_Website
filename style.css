@@ -373,7 +373,7 @@ footer {
   border: none;
 }
 
-/* -------------------Projects----------------- */
+/* ------------------- Projects ----------------- */
 
 .firstSec video {
   height: 600px;
@@ -471,7 +471,7 @@ footer {
   border-radius: 50%;
 }
 
-/* ------------------------Media query for mobile devices---------------------- */
+/* ------------------------ Media query for mobile devices ---------------------- */
 
 @media (max-width: 600px) {
   HTML,
@@ -684,7 +684,7 @@ footer {
   } */
 
   #service-card{
-    width: 80%;
+    width: 246px !important;
   }
 
   .thirdSection h1 {
