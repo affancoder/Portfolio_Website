@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// ---- Preloader ----
+
+const loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+
 // -----------Right click disable code ---------
 
 // document.addEventListener("contextmenu", function (e) {

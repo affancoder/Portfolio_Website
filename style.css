@@ -16,6 +16,18 @@ body {
   font-family: "Poppins", sans-serif;
   flex-wrap: wrap;
 }
+
+/* ----- Preloader ----- */
+
+#preloader{
+  background: #000 url(assests/loader.webp) no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
