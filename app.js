@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
 
 // -----------Right click disable code ---------
 
-// document.addEventListener("contextmenu", function (e) {
-//   e.preventDefault();
-// });
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
 
