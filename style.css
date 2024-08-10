@@ -15,6 +15,12 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* ----- Preloader ----- */
@@ -28,7 +34,7 @@ body {
   z-index: 100;
 }
 
-nav {
+nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
