@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" class="rel" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
   <script type="text/javascript">
     (function() {
       emailjs.init("n0FFVmEY1sXoWQix3"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS.
@@ -23,110 +23,20 @@
   <style>
     #map {
       height: 460px;
-      width: 60%;
-      margin-left: 20%;
+      width: 70%;
       border: 4px solid rgb(130, 127, 127);
       border-style: ridge;
+      border-radius: 14px;
       margin-bottom: 50px;
-    }
-
-    /* --- Contact Form --- */
-
-    .contact-form {
-      background-color: #1f1f1f;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      max-width: 400px;
-      width: 100%;
-      /* margin-top: 24%; */
       position: relative;
-      top: 100%;
       left: 50%;
-      transform: translate(-50%, -2%);
-    }
-
-    .contact-form h2 {
-      margin-bottom: 20px;
-      color: #ffa500;
-      text-align: center;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #333333;
-      color: #ffffff;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      background-color: #444444;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      height: 100px;
-    }
-
-    .form-group button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ffa500;
-      color: #121212;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .form-group button:hover {
-      background-color: #ff8c00;
-    }
-
-
-    @media (max-width: 600px) {
-      #map {
-        width: 75%;
-        height: 360px;
-        border: 4px solid rgb(130, 127, 127);
-        border-style: ridge;
-        margin-bottom: 50px;
-        margin-left: 40px;
-      }
-
-      .contact-form {
-        padding: 20px;
-        width: 74%;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        padding: 8px;
-      }
-
-      .form-group button {
-        padding: 8px;
-        font-size: 14px;
-      }
+      transform: translate(-50%,-2%);
     }
   </style>
 </head>
 
 <body>
+  <!-- <div id="preloader"></div> -->
   <header>
     <nav class="navbar">
       <div class="left">Affan's Portfolio</div>
@@ -184,8 +94,8 @@
   </main>
 
   <section>
-    <h1 style="display: flex; justify-content: center">
-      <i class="fa-solid fa-house-flag"></i> My Home Town Map :
+    <h1 style="text-align: center;">
+      &nbsp;<i class="fa-solid fa-house-flag"></i> My Home Town Map :
     </h1>
     <div style="height: 30px"></div>
     <div id="map"></div>
@@ -197,7 +107,7 @@
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: "mapbox://styles/mapbox/streets-v12", // style URL
         center: [88.4053, 22.8665], // starting position [lng, lat]
-        zoom: 14, // starting zoom
+        zoom: 7, // starting zoom
       });
       const marker2 = new mapboxgl.Marker({
           color: "red"
@@ -318,15 +228,30 @@
 
   <section>
     <div class="contact-form">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
+      <img src="assests/affan1.jpg">
+      <form action="https://formspree.io/f/xpwaywop" method="POST">
+        <h2>Contact Me</h2>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Azim premji" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" placeholder="azimpremji@gmail.com" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </div>
+      </form>
+      <!-- <form action="https://formspree.io/f/xpwaywop" method="POST" >
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Azim Premji" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="azimpremji@gmail.com" required>
+          <input type="email" id="email" name="email" name="_replyto" placeholder="azimpremji@gmail.com" required>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
@@ -335,7 +260,7 @@
         <div class="form-group">
           <button type="submit">Send Message</button>
         </div>
-      </form>
+      </form> -->
     </div>
   </section>
 

@@ -38,3 +38,32 @@ document.addEventListener("contextmenu", function (e) {
 document.addEventListener("DOMContentLoaded", function() {
   document.body.classList.add('loaded');
 });
+
+// Gsap Animation 
+
+window.addEventListener('load', () => {
+  // Animate the navbar
+  gsap.from("nav", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
+
+  // Animate the song list containers
+  gsap.from(".container", {
+    duration: 1.5,
+    y: 50,
+    opacity: 0,
+    ease: "power2.out",
+    stagger: 0.2, // Stagger animation for multiple containers
+  });
+
+  // Animate individual song items
+  gsap.from(".songItem", {
+    duration: 1.5,
+    x: -50,
+    opacity: 0,
+    ease: "power2.out",
+    stagger: 0.1, // Stagger animation for song items
+    delay: 0.5,
+  });
+
+  // Animate the bottom player controls
+  gsap.from(".bottom", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
+});

@@ -2,14 +2,19 @@
   margin: 0;
   padding: 0;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 HTML,
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 body {
   background-color: rgb(0, 0, 33);
   color: white;
@@ -25,7 +30,7 @@ body.loaded {
 
 /* ----- Preloader ----- */
 
-#preloader{
+#preloader {
   background: #000 url(assests/loader.webp) no-repeat center center;
   background-size: 30%;
   height: 100vh;
@@ -34,51 +39,61 @@ body.loaded {
   z-index: 100;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 80px;
   background-color: rgb(18, 18, 62);
 }
+
 nav ul {
   display: flex;
   justify-content: center;
 }
+
 nav ul li {
   list-style: none;
   margin: 0 23px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: white;
 }
+
 nav ul li a:hover {
   color: rgb(153, 153, 226);
   font-size: 1.01rem;
   transition: all 0.2s;
 }
+
 .navbar-toggle {
   display: none;
 }
+
 main hr {
   border: 0;
   background: #9c97f1;
   height: 1.2px;
   margin: 40px 84px;
 }
+
 .left {
   font-size: 2rem;
 }
+
 .firstSection {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 120px 0;
 }
-.firstSection > div {
+
+.firstSection>div {
   width: 30%;
 }
+
 .leftSection {
   font-size: 1.9rem;
 }
@@ -94,10 +109,12 @@ main hr {
   font-size: 16px;
   cursor: pointer;
 }
+
 .btn1 a {
   text-decoration: none;
   color: white;
 }
+
 .btn2 a {
   text-decoration: none;
   color: white;
@@ -115,23 +132,29 @@ main hr {
 .rightSection img {
   width: 80%;
 }
+
 .purple {
   color: rgb(170, 107, 228);
 }
+
 #element {
   color: rgb(170, 107, 228);
 }
+
 .text-gray {
   color: gray;
 }
+
 .secondSection {
   max-width: 80vw;
   margin: auto;
   height: 90vh;
 }
+
 .secondSection h1 {
   font-size: 2rem;
 }
+
 .secondSection .box {
   background: white;
   width: 80vw;
@@ -139,6 +162,7 @@ main hr {
   margin: 56px 0;
   display: flex;
 }
+
 .secondSection .vertical {
   height: 93px;
   width: 1px;
@@ -153,6 +177,7 @@ main hr {
   top: -32px;
   left: -10px;
 }
+
 .vertical-title {
   position: relative;
   top: 58px;
@@ -160,6 +185,7 @@ main hr {
   font-size: 1.3rem;
   margin-left: -2px;
 }
+
 .vertical-desc {
   position: relative;
   top: 70px;
@@ -185,26 +211,31 @@ main hr {
   /* height: 300vh; */
   height: auto;
 }
+
 .skills h2 {
   display: flex;
   justify-content: center;
 }
+
 .web-skills {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
+
 .card {
   width: 300px;
   margin: 50px;
   padding: 10px;
   text-align: center;
 }
+
 .card:hover {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 /* -------------Style for the image-------------- */
 .card img {
   max-width: 200px;
@@ -232,8 +263,9 @@ main hr {
   background-color: #070746;
   object-fit: cover;
   border-radius: 16px;
-  
+
 }
+
 /* -----------------visitor panel------------ */
 
 .visitor-panel {
@@ -261,12 +293,14 @@ footer {
   color: white;
   height: 250px;
 }
+
 .footer-first {
   display: flex;
   padding: 23px 122px;
   justify-content: space-evenly;
   font-size: 1.3rem;
 }
+
 .footer-second ul {
   display: flex;
   margin-left: 450px;
@@ -274,14 +308,17 @@ footer {
   gap: 20px;
   font-size: 1.3rem;
 }
+
 .footer-second ul li a {
   text-decoration: none;
   color: white;
 }
+
 .footer-second ul:hover {
   color: #1e2167;
   cursor: pointer;
 }
+
 .footer-third ul {
   display: flex;
   margin-left: 1020px;
@@ -289,16 +326,20 @@ footer {
   gap: 17px;
   font-size: 2.2rem;
 }
+
 .footer-third ul li a {
   text-decoration: none;
   color: white;
 }
+
 .footer ul {
   list-style: none;
 }
-.footer > div {
+
+.footer>div {
   width: 223px;
 }
+
 .footer-rights {
   text-align: center;
   margin-top: 42px;
@@ -340,6 +381,7 @@ footer {
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .heading:hover {
   color: rgb(85, 84, 84);
 }
@@ -358,34 +400,34 @@ footer {
   margin: 10px;
 }
 
-#service-card{
+#service-card {
   height: 320px;
   width: 360px;
   border: none;
   margin: 20px;
 }
 
-#service-card img{
+#service-card img {
   width: 140px;
   height: 100px;
   position: relative;
   top: 12%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-#service-card h3{
+#service-card h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 18px;
 }
 
-#service-card p{
+#service-card p {
   margin-top: 14px;
 }
 
-#service-card:hover{
+#service-card:hover {
   background-color: rgb(27, 146, 140);
   transition: 0.4s;
   border: none;
@@ -399,6 +441,7 @@ footer {
   margin-top: -175px;
   padding: 50px;
 }
+
 .secondSec {
   color: white;
   margin-left: 838px;
@@ -406,6 +449,7 @@ footer {
   padding: 10px;
   width: 420px;
 }
+
 .secondSec h2 {
   color: white;
   margin-top: -460px;
@@ -443,7 +487,7 @@ footer {
   margin: 5px;
 }
 
-/* ---------------------Contact me---------------------- */
+/* --------------------- Contact Me ---------------------- */
 
 .leftSection img {
   height: 400px;
@@ -458,6 +502,7 @@ footer {
   margin-left: 0px;
   height: 2px;
 }
+
 .insta button {
   padding: 10px;
   background: #1e2167;
@@ -468,6 +513,7 @@ footer {
   cursor: pointer;
   margin-top: 10px;
 }
+
 .insta button a {
   text-decoration: none;
   color: white;
@@ -489,14 +535,130 @@ footer {
   border-radius: 50%;
 }
 
+/* ----------- Contact Form -------- */
+
+.contact-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #1f1f1fa6; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+  padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  /* box-shadow: 0px 4px 2px rgba(220, 217, 213, 0.902); */
+  border:none;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.contact-form img {
+  width: 38%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  /* margin-bottom: 8px; */
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background-color: #333333d2;
+  color: #ffffff;
+}
+
+.form-group input {
+  width: 90%;
+  margin: 10px;
+}
+
+.form-group textarea {
+  width: 90%;
+  border-radius: 14px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: #444444;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 14px;
+  /* background-color: #980d0d70; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+  border: 1px solid aliceblue;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.form-group button:hover {
+  background-color: #ff8c00;
+}
+
 /* ------------------------ Media query for mobile devices ---------------------- */
 
 @media (max-width: 600px) {
+
   HTML,
   body {
     width: 100%;
     overflow-x: hidden;
   }
+
   .navbar-menu {
     display: none;
     flex-direction: column;
@@ -514,16 +676,20 @@ footer {
   .navbar-menu.active {
     display: flex;
   }
+
   .navbar-toggle {
     display: block;
     cursor: pointer;
   }
+
   .navbar .left {
     font-size: 1.3rem;
   }
+
   .fa-list {
     font-size: 1.2rem;
   }
+
   .main {
     flex-direction: column;
   }
@@ -535,16 +701,19 @@ footer {
     margin-top: -60px;
     margin-left: 100px;
   }
+
   .leftSection .buttons {
     display: flex;
     margin-left: -18px;
     align-items: center;
     width: 80px;
   }
+
   .rightSection img {
     width: 250px;
     margin-left: -75px;
   }
+
   .btn1,
   .btn2,
   .btn3 {
@@ -562,6 +731,7 @@ footer {
   .secondSection .study {
     font-size: 25px;
   }
+
   .box {
     /* display: none; */
     flex-direction: column;
@@ -586,14 +756,17 @@ footer {
     /* display: none; */
     height: auto;
   }
+
   .text-gray {
     display: none;
   }
+
   .study i {
     font-size: 20px;
     display: flex;
     justify-content: center;
   }
+
   .school {
     height: 500px;
     display: flex;
@@ -603,19 +776,24 @@ footer {
     text-align: center;
     display: none;
   }
+
   .school .vertical-title .vertical-desc {
     text-align: center;
   }
+
   .school .vertical-title {
     margin-left: -22px;
   }
+
   .h1 {
     font-size: 30px;
     margin-left: 32px;
   }
+
   .firstSection {
     flex-direction: column;
   }
+
   .leftSection img {
     height: 380px;
     width: 280px;
@@ -653,28 +831,35 @@ footer {
     margin-top: 440px;
     height: auto;
   }
+
   .skills {
     height: auto;
   }
+
   #skills-hr {
     display: flex;
     background-color: rgb(166, 166, 202);
   }
+
   .skills img {
     flex-wrap: wrap;
     width: 100px;
     height: 100px;
   }
+
   #express {
     width: 170px;
   }
+
   .skills .web-skills {
     flex-wrap: wrap;
     font-size: 1rem;
   }
+
   .con-video {
     flex-direction: column;
   }
+
   .firstSec video {
     width: 90%;
     height: 320px;
@@ -696,12 +881,13 @@ footer {
   .service-container {
     flex-direction: column;
   }
+
   /* .service-container .card {
     height: auto;
     width: auto;
   } */
 
-  #service-card{
+  #service-card {
     width: 246px !important;
   }
 
@@ -724,15 +910,40 @@ footer {
     margin-left: 6%;
   }
 
-  /* Contact */
+  #map {
+    height: 360px !important;
+  }
 
-  .form-group input{
+  /* ---- Contact ----- */
+
+  .form-group input {
     width: 90% !important;
   }
-  
+
   textarea {
     width: 90% !important;
     /* background: red !important; */
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 74%;
+  }
+
+  .contact-form img {
+    display: none;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+  }
+
+  .form-group button {
+    padding: 8px;
+    font-size: 14px;
   }
 
   /* --------------------footer------------------ */
@@ -743,21 +954,26 @@ footer {
     flex-wrap: wrap;
     height: 315px;
   }
+
   .footer-first {
     font-size: 14px;
     margin-left: -50px;
     height: 50px;
   }
+
   .footer-second {
     margin-left: -410px;
   }
+
   .footer-second a {
     font-size: 12px;
   }
+
   .footer-third {
     margin-left: -950px;
     margin-top: 50px;
   }
+
   .footer-third a {
     font-size: 25px;
   }
