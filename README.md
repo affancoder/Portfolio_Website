@@ -24,7 +24,7 @@ To showcase my technical proficiency, a 'Skills' section outlines the tools and 
 
 ## Contact
 
-Ensuring seamless communication, a 'Contact' page provides various channels for reaching out. Users can connect with me through a contact form, social media links, or download my resume for a comprehensive overview of my professional background.
+Ensuring seamless communication, a 'Contact' page provides various channels for reaching out. Users can connect with me through a contact form, social media links, or download my resume for a comprehensive overview of my professional background. Working contact form by using formspree.
 
 ## Summary
 
