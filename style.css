@@ -817,6 +817,11 @@ footer {
     font-size: 1.4rem;
   }
 
+  .timeline-content p:nth-child(2){
+    text-align: start;
+    margin-left: auto;
+  }
+
   .timeline-content p:nth-child(3){
     text-align: left;
     margin-bottom: 1rem;
