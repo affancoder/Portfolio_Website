@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
 // -----------Right click disable code ---------
 
 document.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 });
 
 // ---- Smooth loading ----
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('load', () => {
   // Animate the navbar
-  gsap.from("nav", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
+  // gsap.from("nav", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
 
   // Animate the song list containers
   gsap.from(".container", {
@@ -67,3 +67,4 @@ window.addEventListener('load', () => {
   // Animate the bottom player controls
   gsap.from(".bottom", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
 });
+

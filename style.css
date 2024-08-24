@@ -64,8 +64,9 @@ nav ul li a {
 
 nav ul li a:hover {
   color: rgb(153, 153, 226);
-  font-size: 1.01rem;
-  transition: all 0.2s;
+  color: seagreen;
+  /* font-size: 1.01rem; */
+  transition: all 0.5s;
 }
 
 .navbar-toggle {
@@ -134,11 +135,14 @@ main hr {
 }
 
 .purple {
-  color: rgb(170, 107, 228);
+  /* color: rgb(170, 107, 228); */
+  /* color: rgb(24, 225, 24); */
+  color: #23d5ab;
 }
 
 #element {
   color: rgb(170, 107, 228);
+  color: #23d5ab;
 }
 
 .text-gray {
@@ -236,6 +240,133 @@ main hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* ------------- Experience --------- */
+
+#experience {
+  padding: 40px 0px;
+  background-color: rgb(0, 0, 33);
+  /* border: 2px solid seagreen; */
+  /* border-radius: 12px; */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 40px;
+  animation: slideInLeft 0.8s ease-in-out forwards, fadeIn 0.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+  transform: translateY(0) scale(1.05);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 2;
+  top: 22px;
+  width: 25px;
+  height: 25px;
+  background-color: #28a745;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  /* background-color: #434242; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-content p:nth-child(2){
+  color: darkgray;
+  text-align: end;
+  margin: 20px;
+}
+
+.timeline-content p:nth-child(3){
+  text-align: center;
+}
+
+.timeline-content p:nth-child(4){
+  text-align: center;
+}
+
+
+
+.timeline-title {
+  font-size: 24px;
+  color: #28a745;
+  margin-bottom: 15px;
+  animation: zoomIn 0.6s ease-in-out forwards;
+  transform-origin: left;
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  0% {
+      transform: translateX(-50px) translateY(50px) scale(0.95);
+  }
+  100% {
+      transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.15);
+  }
+}
+
+
 /* -------------Style for the image-------------- */
 .card img {
   max-width: 200px;
@@ -266,7 +397,7 @@ main hr {
 
 }
 
-/* -----------------visitor panel------------ */
+/* ----------------- Visitor panel ------------ */
 
 .visitor-panel {
   display: flex;
@@ -286,7 +417,7 @@ div#count {
   background-color: rgb(170, 167, 167);
 }
 
-/* --------------------footer-------------- */
+/* -------------------- Footer -------------- */
 
 footer {
   background-color: #0c0e1a;
@@ -352,7 +483,7 @@ footer {
   width: 500px;
 }
 
-/* -------------------------About------------------- */
+/* ------------------------- About ------------------- */
 
 .certificate img {
   border: 4px solid rgb(130, 126, 126);
@@ -429,7 +560,8 @@ footer {
 
 #service-card:hover {
   background-color: rgb(27, 146, 140);
-  transition: 0.4s;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
   border: none;
 }
 
@@ -666,10 +798,11 @@ footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #0a0a55;
+    background-color: #08082e;
+    color: white;
     z-index: 1;
     text-align: center;
-    gap: 34px;
+    gap: 2em;
     height: 45%;
   }
 
@@ -683,8 +816,9 @@ footer {
   }
 
   .navbar .left {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
+
 
   .fa-list {
     font-size: 1.2rem;
