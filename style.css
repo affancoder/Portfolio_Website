@@ -317,8 +317,6 @@ main hr {
   text-align: center;
 }
 
-
-
 .timeline-title {
   font-size: 24px;
   color: #28a745;
@@ -819,6 +817,14 @@ footer {
     font-size: 1.4rem;
   }
 
+  .timeline-content p:nth-child(3){
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content p:nth-child(4){
+    text-align: left;
+  }
 
   .fa-list {
     font-size: 1.2rem;
