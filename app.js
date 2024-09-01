@@ -68,3 +68,18 @@ window.addEventListener('load', () => {
   gsap.from(".bottom", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
 });
 
+gsap.to('.footer-container', {
+  opacity: 1,
+  y: 0,
+  duration: 1.5,
+  ease: 'power3.out',
+  delay: 0.3
+});
+
+gsap.to('.footer-bottom', {
+  opacity: 1,
+  y: 0,
+  duration: 1.2,
+  ease: 'power3.out',
+  delay: 0.5
+});
