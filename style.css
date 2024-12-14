@@ -26,6 +26,8 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
+  overflow: hidden;
 }
 nav ul li {
   list-style: none;
@@ -36,7 +38,8 @@ nav ul li a {
   color: white;
 }
 nav ul li a:hover {
-  color: rgb(153, 153, 226);
+  /* color: rgb(153, 153, 226); */
+  color: gray;
   font-size: 1.01rem;
   transition: all 0.2s;
 }
@@ -98,10 +101,10 @@ main hr {
   width: 80%;
 }
 .purple {
-  color: rgb(170, 107, 228);
+  color: lightseagreen;
 }
 #element {
-  color: rgb(170, 107, 228);
+  color: lightseagreen;
 }
 .text-gray {
   color: gray;
@@ -448,7 +451,7 @@ footer {
 
 /* ------------------------Media query for mobile devices---------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   HTML,
   body {
     width: 100%;
