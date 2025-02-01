@@ -114,7 +114,6 @@ main hr {
 .btn1 a {
   text-decoration: none;
   color: white;
-  
 }
 
 .btn2 a {
@@ -1146,16 +1145,16 @@ div#count {
   }
 }
 
-/* Tablet Styles */
- 
-@media screen and (max-width: 1024px) {
+/*            Tablet Styles             */
 
-  HTML,body{
+@media (min-width: 600px) and (max-width: 1024px) {
+  HTML,
+  body {
     height: 100%;
     display: block;
   }
 
-  /*         School         */
+  /*        Home - School         */
 
   .secondSection {
     flex-direction: column;
@@ -1236,5 +1235,39 @@ div#count {
     width: 400px;
   }
 
+  /* ------------------- PROJECTS ----------------- */
+
+  .con-video {
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll !important;
+  }
+
+  .con-video .content {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  /* ------------------ Certificates ------------- */
+  
+  .certificate{
+    display: block;
+    /* background-color: red; */
+  }
+
+  .certificate img{
+    top: 0;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%);
+  }
+
+  #map{
+    width: 80% !important;
+  }
+
+  .contact-form{
+    width: 80%;
+  }
 
 }
