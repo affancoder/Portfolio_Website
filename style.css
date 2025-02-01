@@ -54,7 +54,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  margin: 0 23px;
+  margin: 0 20px;
 }
 
 nav ul li a {
@@ -81,7 +81,7 @@ main hr {
 }
 
 .left {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .firstSection {
@@ -91,7 +91,7 @@ main hr {
   margin: 120px 0;
 }
 
-.firstSection>div {
+.firstSection > div {
   width: 30%;
 }
 
@@ -114,6 +114,7 @@ main hr {
 .btn1 a {
   text-decoration: none;
   color: white;
+  
 }
 
 .btn2 a {
@@ -273,7 +274,8 @@ main hr {
   position: relative;
   margin-bottom: 50px;
   padding-left: 40px;
-  animation: slideInLeft 0.8s ease-in-out forwards, fadeIn 0.5s ease-in-out forwards;
+  animation: slideInLeft 0.8s ease-in-out forwards,
+    fadeIn 0.5s ease-in-out forwards;
   opacity: 0;
   transform: translateY(50px) scale(0.95);
   transition: all 0.3s ease-in-out;
@@ -359,7 +361,6 @@ main hr {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -369,7 +370,6 @@ main hr {
     transform: scale(1.15);
   }
 }
-
 
 /* -------------Style for the image-------------- */
 .card img {
@@ -398,7 +398,6 @@ main hr {
   background-color: #070746;
   object-fit: cover;
   border-radius: 16px;
-
 }
 
 /* ----------------- Visitor panel ------------ */
@@ -525,7 +524,6 @@ div#count {
   transform: translateY(20px);
 }
 
-
 .college img {
   height: 700px;
   width: 500px;
@@ -575,13 +573,14 @@ div#count {
 
 .service-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px;
 }
 
 #service-card {
-  height: 320px;
-  width: 360px;
+  flex-grow: 1;
+  height: 340px;
+  width: 200rem;
   border: none;
   margin: 20px;
 }
@@ -613,7 +612,7 @@ div#count {
   border: none;
 }
 
-/* ------------------- Projects ----------------- */
+/* ------------------- PROJECTS ----------------- */
 
 .firstSec video {
   height: 600px;
@@ -752,7 +751,6 @@ div#count {
   }
 }
 
-
 .contact-form img {
   width: 38%;
   border-radius: 50%;
@@ -837,10 +835,10 @@ div#count {
 /* ------------------------ Media query for mobile devices ---------------------- */
 
 @media (max-width: 600px) {
-
   HTML,
   body {
     width: 100%;
+    display: block;
     overflow-x: hidden;
   }
 
@@ -1076,19 +1074,20 @@ div#count {
     height: 220px;
   }
 
-  /* Service */
+  /* Service Card */
 
   .service-container {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  /* .service-container .card {
-    height: auto;
-    width: auto;
-  } */
+  .service-container {
+    height: 100%;
+    width: 100%;
+    margin: 20px 0;
+  }
 
   #service-card {
-    width: 246px !important;
+    width: 100%;
   }
 
   .thirdSection h1 {
@@ -1145,4 +1144,97 @@ div#count {
     padding: 8px;
     font-size: 14px;
   }
+}
+
+/* Tablet Styles */
+ 
+@media screen and (max-width: 1024px) {
+
+  HTML,body{
+    height: 100%;
+    display: block;
+  }
+
+  /*         School         */
+
+  .secondSection {
+    flex-direction: column;
+    /* background-color: red; */
+    height: 600px;
+  }
+
+  .secondSection .study {
+    font-size: 25px;
+  }
+
+  .box {
+    /* display: none; */
+    flex-direction: column;
+  }
+
+  .secondSection .vertical {
+    height: 100;
+    margin: 10px;
+  }
+
+  .vertical-title,
+  .vertical-desc {
+    left: 20px;
+    top: -30px;
+  }
+
+  .secondSection .box {
+    width: 80vw;
+  }
+
+  .image-top {
+    /* display: none; */
+    height: auto;
+  }
+
+  .text-gray {
+    display: none;
+  }
+
+  .study i {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .school {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    margin-top: -600px;
+    text-align: center;
+    display: none;
+  }
+
+  .school .vertical-title .vertical-desc {
+    text-align: center;
+  }
+
+  .school .vertical-title {
+    margin-left: -22px;
+  }
+
+  /*       Service Card       */
+
+  .service-container {
+    flex-wrap: wrap;
+  }
+
+  .service-container {
+    height: 100%;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #service-card {
+    width: 400px;
+  }
+
+
 }
