@@ -45,6 +45,11 @@ nav {
   align-items: center;
   height: 80px;
   background-color: rgb(18, 18, 62);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  flex-grow: 1;
+  z-index: 1000;
 }
 
 nav ul {
@@ -390,6 +395,10 @@ main hr {
 }
 
 /*--------------- Service card -------------------*/
+
+#ServiceBody{
+  margin-top: 100px;
+}
 
 #service-card {
   padding: 20px 30px;
@@ -836,6 +845,7 @@ div#count {
 @media (max-width: 600px) {
   HTML,
   body {
+    height: 100%;
     width: 100%;
     display: block;
     overflow-x: hidden;
@@ -849,12 +859,20 @@ div#count {
     left: 0;
     width: 100%;
     background-color: #08082e;
+    opacity: 0.9;
     color: white;
-    z-index: 1;
+    z-index: 10;
     text-align: center;
-    gap: 2em;
-    height: 45%;
+    gap: 2.5rem;
+    padding: 50px 0;
   }
+
+  /* .navbar-menu li:hover {
+    border: 1px solid white;
+    padding: 2px 0;
+    align-items: center;
+    border-radius: 12px;
+  } */
 
   .navbar-menu.active {
     display: flex;
@@ -969,7 +987,7 @@ div#count {
     display: flex;
     flex-direction: column;
     margin-left: 65px;
-    margin-top: -600px;
+    /* margin-top: -600px; */
     text-align: center;
     display: none;
   }
@@ -989,6 +1007,7 @@ div#count {
 
   .firstSection {
     flex-direction: column;
+    margin-top: 200px;
   }
 
   .leftSection img {
@@ -1012,6 +1031,7 @@ div#count {
   }
 
   #hr {
+    display: none;
     width: 100%;
   }
 
@@ -1249,25 +1269,30 @@ div#count {
   }
 
   /* ------------------ Certificates ------------- */
-  
-  .certificate{
+
+  .certificate {
     display: block;
     /* background-color: red; */
   }
 
-  .certificate img{
+  .certificate img {
     top: 0;
-    left: 50%;
+    left: 45%;
     position: relative;
     transform: translate(-50%);
   }
 
-  #map{
+  #map {
     width: 80% !important;
   }
 
-  .contact-form{
-    width: 80%;
+  /* contact */
+
+  #hr {
+    width: 100%;
   }
 
+  .contact-form {
+    width: 80%;
+  }
 }
