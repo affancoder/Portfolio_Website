@@ -265,7 +265,7 @@ main hr {
 
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 20px 0;
   list-style: none;
@@ -277,7 +277,7 @@ main hr {
 .timeline-item {
   position: relative;
   margin-bottom: 50px;
-  padding-left: 40px;
+  padding-left: 50px;
   animation: slideInLeft 0.8s ease-in-out forwards,
     fadeIn 0.5s ease-in-out forwards;
   opacity: 0;
@@ -303,15 +303,13 @@ main hr {
 
 .timeline-content {
   padding: 20px 30px;
-  /* background-color: #434242; */
-  /* border-radius: 10px; */
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease-in-out;
 }
 
 .timeline-content p:nth-child(2) {
   color: darkgray;
-  text-align: end;
+  text-align: end !important;
   margin: 20px;
 }
 
@@ -330,6 +328,10 @@ main hr {
   animation: zoomIn 0.6s ease-in-out forwards;
   transform-origin: left;
   opacity: 0;
+}
+
+.timeline-content p{
+  text-align: left !important;
 }
 
 @keyframes slideInLeft {
@@ -373,6 +375,50 @@ main hr {
   50% {
     transform: scale(1.15);
   }
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.btncontainer a {
+  text-decoration: none;
+}
+
+.btn-animated {
+  font-size: 1rem;
+  padding: 15px 30px;
+  color: white;
+  background: linear-gradient(45deg, #28a745, #218838);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.btn-animated::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-animated:hover::before {
+  top: 100%;
+  left: 100%;
 }
 
 /* -------------Style for the image-------------- */
@@ -863,13 +909,6 @@ div#count {
     padding: 50px 0;
   }
 
-  /* .navbar-menu li:hover {
-    border: 1px solid white;
-    padding: 2px 0;
-    align-items: center;
-    border-radius: 12px;
-  } */
-
   .navbar-menu.active {
     display: flex;
   }
@@ -1159,6 +1198,21 @@ div#count {
     padding: 8px;
     font-size: 14px;
   }
+
+  .web-skills img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .web-skills #express{
+    width: 70px;
+    height: 70px;
+  }
+
+  .web-skills .card{
+    margin: 10px !important;
+  }
+
 }
 
 /*            Tablet Styles             */
