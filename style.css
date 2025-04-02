@@ -1230,6 +1230,14 @@ div#count {
     height: 220px;
   }
 
+  .timeline-title{
+    font-size: 1.2rem;
+  }
+
+  .timeline-title p{
+    font-size: 1rem;
+  }
+
   /* Service Card */
 
   .service-container {
