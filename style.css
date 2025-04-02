@@ -474,6 +474,108 @@ div#count {
   background-color: rgb(170, 167, 167);
 }
 
+/* Scroll to Top button */
+
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  /* background: linear-gradient(135deg, #ff416c, #ff4b2b); */
+  background-color: #3b7289;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.4s, transform 0.4s, background 0.3s;
+}
+
+/* Hover Effect */
+#scrollToTop:hover {
+  background: linear-gradient(135deg, #3b7289, #419eca);
+  box-shadow: 0 6px 15px #3b7289;
+}
+
+/* Show button when scrolling */
+#scrollToTop.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Click Animation */
+#scrollToTop:active {
+  transform: scale(0.9);
+}
+
+/* Button Styling */
+.ai-robo-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3b7289;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.ai-robo-btn i {
+  font-size: 22px;
+  animation: roboMove 1.5s infinite alternate;
+}
+
+/* Hover Effect */
+.ai-robo-btn:hover {
+  background: linear-gradient(135deg, #3b7289, #419eca);
+  box-shadow: 0 6px 15px #3b7289;
+}
+
+/* Click Effect */
+.ai-robo-btn:active {
+  transform: scale(0.95);
+}
+
+#robosection a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.fixed-btn {
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+}
+
+.ai-robo {
+  bottom: 80px; /* Adjust spacing */
+}
+
+.scroll-top {
+  bottom: 20px; /* Adjust spacing */
+}
+
+.ai-robo-btn:hover,
+#scrollToTop:hover {
+  opacity: 0.8;
+}
+
 /* -------------------- Footer -------------- */
 
 /* Footer Styles */

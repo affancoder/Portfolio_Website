@@ -83,3 +83,21 @@ gsap.to('.footer-bottom', {
   ease: 'power3.out',
   delay: 0.5
 });
+
+
+// Scrolling to top
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
