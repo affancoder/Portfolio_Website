@@ -101,3 +101,85 @@ scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Toggle Chatbot Visibility
+function toggleChatbot() {
+  const chatbot = document.querySelector('.chatbot-container');
+  chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Predefined Responses (Detailed)
+const responses = [
+  { keywords: ["your name", "who are you", "creator", "made you", "built you","build"], response: "I'm a chatbot created by MD Affan Asghar. 😊" },
+  { keywords: ["developer name", "who made you", "who is your developer"], response: "My developer is MD Affan Asghar. 🚀" },
+  { keywords: ["phone number", "contact", "mobile", "phone"], response: "You can contact MD Affan Asghar at 📞 9339828230." },
+  { keywords: ["email", "mail", "gmail"], response: "You can reach him at 📧 affanasgar8@gmail.com." },
+  { keywords: ["address", "location", "where do you live"], response: "He lives at 🏠 Kankinara, Kolkata, West Bengal." },
+  { keywords: ["skills", "expertise", "technologies", "tech stack"], response: "He is skilled in 🔥 Full-Stack Web Development, Node.js, React, Php, MySQL MongoDB, Express.js, JavaScript, HTML, CSS, and more!" },
+  { keywords: ["projects", "work", "portfolio"], response: "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Simtrak Solution, IVMS, and a Weather App using React. 🚀" },
+  { keywords: ["portfolio", "website", "profile"], response: "Check out his portfolio here: 🌐 (Provide your portfolio link)." },
+  { keywords: ["college", "education", "study", "degree"], response: "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology." },
+  { keywords: ["internship", "experience", "job"], response: "He worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd." },
+  { keywords: ["final year project", "academic project"], response: "His final year project is a full-stack web development project that aims to revolutionize the industry. 🚀" },
+  { keywords: ["hobbies", "interests", "passion"], response: "He loves 💻 coding, designing beautiful websites, learning new tech, and contributing to open-source projects. 🚀" },
+  { keywords: ["social media", "linkedin", "github"], response: "You can connect with him here:\n🔗 LinkedIn: https://linkedin.com/in/mdaffanasghar/\n🐱 GitHub: https://github.com/affancoder" },
+  { keywords: ["career", "future plans", "goal"], response: "His goal is to become a highly skilled full-stack developer and work on innovative tech projects. 🚀" },
+  { keywords: ["freelance", "hire", "services"], response: "Yes! He is available for freelance projects. Contact him at 📧 affanasgar8@gmail.com." },
+  { keywords: ["hi", "hello", "hey"], response: "Hello! How can I assist you today? 😊" },
+  { keywords: ["bye", "goodbye", "see you"], response: "Goodbye! Have a great day! 😊" },
+];
+
+// Function to Find Best Response (Smart Matching)
+function findBestResponse(userMessage) {
+  userMessage = userMessage.toLowerCase();
+
+  let bestMatch = null;
+  let highestMatchCount = 0;
+
+  for (let entry of responses) {
+      let matchCount = entry.keywords.filter(keyword => userMessage.includes(keyword)).length;
+      
+      if (matchCount > highestMatchCount) {
+          highestMatchCount = matchCount;
+          bestMatch = entry.response;
+      }
+  }
+
+  return bestMatch || "I'm still learning! 😊 Ask me anything about MD Affan Asghar.";
+}
+
+// Send Message
+function sendMessage() {
+  const userInput = document.getElementById("userInput");
+  const message = userInput.value.trim();
+  if (message === "") return;
+
+  // Add User Message
+  addMessage(message, "user-message");
+
+  // Get Bot Response
+  setTimeout(() => {
+      let botResponse = findBestResponse(message);
+      addMessage(botResponse, "bot-message");
+  }, 1000);
+
+  userInput.value = "";
+}
+
+// Handle Enter Key
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+      sendMessage();
+  }
+}
+
+// Add Message to Chat
+function addMessage(text, className) {
+  const messageContainer = document.getElementById("chatbotMessages");
+  const messageDiv = document.createElement("div");
+  messageDiv.className = className;
+  messageDiv.textContent = text;
+  messageContainer.appendChild(messageDiv);
+
+  // Scroll to Bottom
+  messageContainer.scrollTop = messageContainer.scrollHeight;
+}

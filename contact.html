@@ -112,7 +112,7 @@
       const marker2 = new mapboxgl.Marker({
           color: "red"
         })
-        .setLngLat([88.401445, 22.865637])
+        .setLngLat([87.401445, 22.865637])
         .addTo(map);
       // Add a scale control to the map
       map.addControl(new mapboxgl.ScaleControl());
@@ -268,6 +268,31 @@
   <button id="scrollToTop" class="fixed-btn scroll-top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+
+  <!-- Chatbot Button -->
+  <section id="chatbotContainer">
+    <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+      <div class="chatbot-header">
+        Chatbot
+        <span class="close-btn" onclick="toggleChatbot()">×</span>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="bot-message">Hello! How can I help you? 😊</div>
+      </div>
+      <div class="chatbot-input">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Type a message..."
+          onkeypress="handleKeyPress(event)"
+        />
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer">

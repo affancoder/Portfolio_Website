@@ -35,6 +35,7 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <!-- <li><a href="contact.html">Chat</a></li> -->
           </ul>
         </div>
 
@@ -44,6 +45,31 @@
       </nav>
     </header>
     <main>
+      <!-- Chatbot Button -->
+      <section id="chatbotContainer">
+        <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+        <!-- Chatbot Container -->
+        <div class="chatbot-container">
+          <div class="chatbot-header">
+            Chatbot
+            <span class="close-btn" onclick="toggleChatbot()">×</span>
+          </div>
+          <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">Hello! How can I help you? 😊</div>
+          </div>
+          <div class="chatbot-input">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Type a message..."
+              onkeypress="handleKeyPress(event)"
+            />
+            <button onclick="sendMessage()">➤</button>
+          </div>
+        </div>
+      </section>
+
       <section class="firstSection">
         <div class="leftSection">
           Hi, my name is <span class="purple">Affan</span>
