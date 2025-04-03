@@ -78,6 +78,19 @@ nav ul li a:hover {
   display: none;
 }
 
+.navbar img{
+  width: 46px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.namelogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main hr {
   border: 0;
   background: #9c97f1;
