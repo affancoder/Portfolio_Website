@@ -109,6 +109,10 @@ function toggleChatbot() {
 
 // Predefined Responses (Detailed)
 const responses = [
+  { 
+    keywords: ["who is affan", "what affan does", "about affan", "affan asghar", "md affan asghar"], 
+    response: "MD Affan Asghar is a passionate Full Stack Web Developer and Computer Science Engineering student, dedicated to building beautiful, responsive, and user-friendly websites. 💻🚀" 
+  },  
   { keywords: ["your name", "who are you", "creator", "made you", "built you","build"], response: "I'm a chatbot created by MD Affan Asghar. 😊" },
   { keywords: ["developer name", "who made you", "who is your developer"], response: "My developer is MD Affan Asghar. 🚀" },
   { keywords: ["phone number", "contact", "mobile", "phone"], response: "You can contact MD Affan Asghar at 📞 9339828230." },
