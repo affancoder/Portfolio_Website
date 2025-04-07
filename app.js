@@ -119,7 +119,7 @@ const responses = [
   { keywords: ["email", "mail", "gmail"], response: "You can reach him at 📧 affanasgar8@gmail.com." },
   { keywords: ["address", "location", "where do you live"], response: "He lives at 🏠 Kankinara, Kolkata, West Bengal." },
   { keywords: ["skills", "expertise", "technologies", "tech stack"], response: "He is skilled in 🔥 Full-Stack Web Development, Node.js, React, Php, MySQL MongoDB, Express.js, JavaScript, HTML, CSS, and more!" },
-  { keywords: ["projects", "work", "portfolio"], response: "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Simtrak Solution, IVMS, and a Weather App using React. 🚀" },
+  { keywords: ["projects", "work", "portfolio", "project"], response: "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Simtrak Solution, IVMS, and a Weather App using React. 🚀" },
   { keywords: ["portfolio", "website", "profile"], response: "Check out his portfolio here: 🌐 (Provide your portfolio link)." },
   { keywords: ["college", "education", "study", "degree"], response: "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology." },
   { keywords: ["internship", "experience", "job"], response: "He worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd." },
@@ -128,7 +128,7 @@ const responses = [
   { keywords: ["social media", "linkedin", "github"], response: "You can connect with him here:\n🔗 LinkedIn: https://linkedin.com/in/mdaffanasghar/\n🐱 GitHub: https://github.com/affancoder" },
   { keywords: ["career", "future plans", "goal"], response: "His goal is to become a highly skilled full-stack developer and work on innovative tech projects. 🚀" },
   { keywords: ["freelance", "hire", "services"], response: "Yes! He is available for freelance projects. Contact him at 📧 affanasgar8@gmail.com." },
-  { keywords: ["hi", "hello", "hey"], response: "Hello! How can I assist you today? 😊" },
+  { keywords: ["hi", "hello", "hey","hii"], response: "Hello! How can I assist you today? 😊" },
   { keywords: ["bye", "goodbye", "see you"], response: "Goodbye! Have a great day! 😊" },
 ];
 
