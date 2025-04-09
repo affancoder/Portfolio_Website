@@ -1471,7 +1471,9 @@ div#count {
   }
 }
 
-/* General Styles */
+/* CHATBOT Styles */
+
+
 #chatbotContainer {
   font-family: Arial, sans-serif;
   background-color: #0d1117;
@@ -1512,6 +1514,7 @@ div#count {
   display: none;
   flex-direction: column;
   overflow: hidden;
+  z-index: 100000 !important;
 }
 
 /* Chatbot Header */
