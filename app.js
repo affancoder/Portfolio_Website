@@ -35,13 +35,13 @@ document.addEventListener("contextmenu", function (e) {
 
 // ---- Smooth loading ----
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.classList.add('loaded');
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("loaded");
 });
 
-// Gsap Animation 
+// Gsap Animation
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   // Animate the navbar
   // gsap.from("nav", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
 
@@ -65,25 +65,30 @@ window.addEventListener('load', () => {
   });
 
   // Animate the bottom player controls
-  gsap.from(".bottom", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
+  gsap.from(".bottom", {
+    duration: 1.5,
+    y: 50,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 1,
+  });
 });
 
-gsap.to('.footer-container', {
+gsap.to(".footer-container", {
   opacity: 1,
   y: 0,
   duration: 1.5,
-  ease: 'power3.out',
-  delay: 0.3
+  ease: "power3.out",
+  delay: 0.3,
 });
 
-gsap.to('.footer-bottom', {
+gsap.to(".footer-bottom", {
   opacity: 1,
   y: 0,
   duration: 1.2,
-  ease: 'power3.out',
-  delay: 0.5
+  ease: "power3.out",
+  delay: 0.5,
 });
-
 
 // Scrolling to top
 
@@ -101,89 +106,254 @@ scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Toggle Chatbot Visibility
+// Chatbot DeepSeek ----
+
 function toggleChatbot() {
-  const chatbot = document.querySelector('.chatbot-container');
-  chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+  const chatbot = document.querySelector(".chatbot-container");
+  chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
 }
 
-// Predefined Responses (Detailed)
 const responses = [
-  { 
-    keywords: ["who is affan", "what affan does", "about affan", "affan asghar", "md affan asghar"], 
-    response: "MD Affan Asghar is a passionate Full Stack Web Developer and Computer Science Engineering student, dedicated to building beautiful, responsive, and user-friendly websites. 💻🚀" 
-  },  
-  { keywords: ["your name", "who are you", "creator", "made you", "built you","build"], response: "I'm a chatbot created by MD Affan Asghar. 😊" },
-  { keywords: ["developer name", "who made you", "who is your developer"], response: "My developer is MD Affan Asghar. 🚀" },
-  { keywords: ["phone number", "contact", "mobile", "phone"], response: "You can contact MD Affan Asghar at 📞 9339828230." },
-  { keywords: ["email", "mail", "gmail"], response: "You can reach him at 📧 affanasgar8@gmail.com." },
-  { keywords: ["address", "location", "where do you live"], response: "He lives at 🏠 Kankinara, Kolkata, West Bengal." },
-  { keywords: ["skills", "expertise", "technologies", "tech stack"], response: "He is skilled in 🔥 Full-Stack Web Development, Node.js, React, Php, MySQL MongoDB, Express.js, JavaScript, HTML, CSS, and more!" },
-  { keywords: ["projects", "work", "portfolio", "project"], response: "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Simtrak Solution, IVMS, and a Weather App using React. 🚀" },
-  { keywords: ["portfolio", "website", "profile"], response: "Check out his portfolio here: 🌐 (Provide your portfolio link)." },
-  { keywords: ["college", "education", "study", "degree"], response: "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology." },
-  { keywords: ["internship", "experience", "job"], response: "He worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd." },
-  { keywords: ["final year project", "academic project"], response: "His final year project is a full-stack web development project that aims to revolutionize the industry. 🚀" },
-  { keywords: ["hobbies", "interests", "passion"], response: "He loves 💻 coding, designing beautiful websites, learning new tech, and contributing to open-source projects. 🚀" },
-  { keywords: ["social media", "linkedin", "github"], response: "You can connect with him here:\n🔗 LinkedIn: https://linkedin.com/in/mdaffanasghar/\n🐱 GitHub: https://github.com/affancoder" },
-  { keywords: ["career", "future plans", "goal"], response: "His goal is to become a highly skilled full-stack developer and work on innovative tech projects. 🚀" },
-  { keywords: ["freelance", "hire", "services"], response: "Yes! He is available for freelance projects. Contact him at 📧 affanasgar8@gmail.com." },
-  { keywords: ["hi", "hello", "hey","hii"], response: "Hello! How can I assist you today? 😊" },
-  { keywords: ["bye", "goodbye", "see you"], response: "Goodbye! Have a great day! 😊" },
+  {
+    keywords: [
+      "who is affan",
+      "what affan does",
+      "about affan",
+      "affan asghar",
+      "md affan asghar",
+      "tell me about affan",
+      "who are you",
+    ],
+    response:
+      "MD Affan Asghar is a passionate Full Stack Web Developer and Computer Science Engineering student, dedicated to building beautiful, responsive, and user-friendly websites. 💻🚀",
+  },
+  {
+    keywords: ["your name", "creator", "made you", "built you", "build", "who created you"],
+    response: "I'm a chatbot created by MD Affan Asghar. 😊",
+  },
+  {
+    keywords: ["developer name", "who made you", "who is your developer"],
+    response: "My developer is MD Affan Asghar. 🚀",
+  },
+  {
+    keywords: ["phone number", "contact", "mobile", "phone", "how to contact", "reach affan"],
+    response: "You can contact MD Affan Asghar at 📞 9339828230.",
+  },
+  {
+    keywords: ["email", "mail", "gmail", "email address"],
+    response: "You can reach him at 📧 affanasgar8@gmail.com.",
+  },
+  {
+    keywords: ["address", "location", "where do you live", "where is affan"],
+    response: "He lives at 🏠 Kankinara, Kolkata, West Bengal.",
+  },
+  {
+    keywords: ["skills", "expertise", "technologies", "tech stack", "what can affan do"],
+    response:
+      "He is skilled in 🔥 Full-Stack Web Development, Node.js, React, Php, MySQL MongoDB, Express.js, JavaScript, HTML, CSS, and more!",
+  },
+  {
+    keywords: ["projects", "work", "portfolio", "project", "what has affan built"],
+    response:
+      "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Full Stack NoHate website, and a Weather App using React,etc. 🚀",
+  },
+  {
+    keywords: ["portfolio", "website", "profile", "personal website"],
+    response: "Check out his portfolio here: 🌐 https://portfolio-affan.netlify.app/.",
+  },
+  {
+    keywords: ["college", "education", "study", "degree", "where did affan study"],
+    response:
+      "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology.",
+  },
+  {
+    keywords: ["internship", "experience", "job", "work experience"],
+    response:
+      "He worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd.",
+  },
+  {
+    keywords: ["final year project", "academic project", "college project"],
+    response:
+      "His final year project is a full-stack web development project that aims to revolutionize the industry. 🚀",
+  },
+  {
+    keywords: ["hobbies", "interests", "passion", "what does affan like"],
+    response:
+      "He loves 💻 coding, designing beautiful websites, learning new tech, and contributing to open-source projects. 🚀",
+  },
+  {
+    keywords: ["social media", "linkedin", "github", "twitter", "instagram"],
+    response:
+      "You can connect with him here:\n🔗 LinkedIn: https://linkedin.com/in/mdaffanasghar/\n🐱 GitHub: https://github.com/affancoder",
+  },
+  {
+    keywords: ["career", "future plans", "goal", "aspirations"],
+    response:
+      "His goal is to become a highly skilled full-stack developer and work on innovative tech projects. 🚀",
+  },
+  {
+    keywords: ["freelance", "hire", "services", "available for work"],
+    response:
+      "Yes! He is available for freelance projects. Contact him at 📧 affanasgar8@gmail.com.",
+  },
+  {
+    keywords: ["hi", "hello", "hey", "hii", "greetings"],
+    response: "Hello! How can I assist you today? 😊",
+  },
+  {
+    keywords: ["bye", "goodbye", "see you", "good night"],
+    response: "Goodbye! Have a great day! 😊",
+  },
+  {
+    keywords: ["thank", "thanks", "appreciate"],
+    response: "You're welcome! Let me know if you need anything else about Affan. 😊",
+  },
 ];
 
-// Function to Find Best Response (Smart Matching)
 function findBestResponse(userMessage) {
   userMessage = userMessage.toLowerCase();
-
+  
+  // First check for exact matches
+  for (let entry of responses) {
+    if (entry.keywords.some(keyword => 
+      userMessage === keyword || 
+      userMessage.includes(keyword) ||
+      new RegExp(`\\b${keyword}\\b`).test(userMessage)
+    )) {
+      return entry.response;
+    }
+  }
+  
+  // Then check for partial matches
   let bestMatch = null;
   let highestMatchCount = 0;
 
   for (let entry of responses) {
-      let matchCount = entry.keywords.filter(keyword => userMessage.includes(keyword)).length;
-      
-      if (matchCount > highestMatchCount) {
-          highestMatchCount = matchCount;
-          bestMatch = entry.response;
-      }
+    let matchCount = entry.keywords.filter(keyword => 
+      userMessage.includes(keyword)
+    ).length;
+    
+    if (matchCount > highestMatchCount) {
+      highestMatchCount = matchCount;
+      bestMatch = entry.response;
+    }
   }
 
-  return bestMatch || "I'm still learning! 😊 Ask me anything about MD Affan Asghar.";
+  return bestMatch || null;
 }
 
-// Send Message
+// Enhanced API call with better fallbacks
+async function callDeepSeekAPI(userMessage) {
+  // Don't call API for simple greetings or common questions
+  const simpleQuestions = ["hi", "hello", "hey", "bye", "thank"];
+  if (simpleQuestions.some(q => userMessage.toLowerCase().includes(q))) {
+    return null;
+  }
+
+  try {
+    const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer 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",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: [
+          {
+            role: "system",
+            content: "You are an assistant that answers questions specifically about MD Affan Asghar, a Full Stack Developer. Keep responses brief (1-2 sentences max) and relevant to Affan's skills, projects, education, or contact info. If the question isn't about Affan, politely decline to answer."
+          },
+          { 
+            role: "user", 
+            content: userMessage 
+          }
+        ],
+        temperature: 0.3, // Lower temperature for more focused answers
+        max_tokens: 100
+      }),
+      timeout: 5000 // Add timeout
+    });
+
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    if (!data.choices?.[0]?.message?.content) {
+      throw new Error("Invalid API response structure");
+    }
+
+    return data.choices[0].message.content;
+  } catch (error) {
+    console.error("DeepSeek API error:", error);
+    return null; // Return null to trigger local fallback
+  }
+}
+
 function sendMessage() {
   const userInput = document.getElementById("userInput");
   const message = userInput.value.trim();
   if (message === "") return;
 
-  // Add User Message
   addMessage(message, "user-message");
-
-  // Get Bot Response
-  setTimeout(() => {
-      let botResponse = findBestResponse(message);
-      addMessage(botResponse, "bot-message");
-  }, 1000);
-
   userInput.value = "";
+
+  // Show typing indicator
+  const messageContainer = document.getElementById("chatbotMessages");
+  const typingIndicator = document.createElement("div");
+  typingIndicator.className = "bot-message typing";
+  typingIndicator.textContent = "AffanBot is typing...";
+  typingIndicator.id = "typingIndicator";
+  messageContainer.appendChild(typingIndicator);
+  messageContainer.scrollTop = messageContainer.scrollHeight;
+
+  setTimeout(async () => {
+    try {
+      // Remove typing indicator
+      const indicator = document.getElementById("typingIndicator");
+      if (indicator) indicator.remove();
+
+      // First try local responses
+      let botResponse = findBestResponse(message);
+
+      // If no local match found, try API
+      if (!botResponse) {
+        const apiResponse = await callDeepSeekAPI(message);
+        botResponse = apiResponse || 
+          "I'm designed to answer questions about MD Affan Asghar. Could you ask something specific about his skills, projects, or contact information?";
+      }
+
+      addMessage(botResponse, "bot-message");
+    } catch (error) {
+      console.error("Error generating response:", error);
+      addMessage("I'm having some trouble right now. Please try asking something specific about Affan's skills or projects.", "bot-message");
+    }
+  }, 1500);
 }
 
-// Handle Enter Key
 function handleKeyPress(event) {
   if (event.key === "Enter") {
-      sendMessage();
+    sendMessage();
   }
 }
 
-// Add Message to Chat
 function addMessage(text, className) {
   const messageContainer = document.getElementById("chatbotMessages");
   const messageDiv = document.createElement("div");
   messageDiv.className = className;
-  messageDiv.textContent = text;
+  
+  // Handle newlines in responses
+  if (typeof text === 'string' && text.includes('\n')) {
+    text.split('\n').forEach((line, i) => {
+      if (i > 0) messageDiv.appendChild(document.createElement('br'));
+      messageDiv.appendChild(document.createTextNode(line));
+    });
+  } else {
+    messageDiv.textContent = text;
+  }
+  
   messageContainer.appendChild(messageDiv);
-
-  // Scroll to Bottom
   messageContainer.scrollTop = messageContainer.scrollHeight;
 }
