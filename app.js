@@ -128,7 +128,14 @@ const responses = [
       "MD Affan Asghar is a passionate Full Stack Web Developer and Computer Science Engineering student, dedicated to building beautiful, responsive, and user-friendly websites. 💻🚀",
   },
   {
-    keywords: ["your name", "creator", "made you", "built you", "build", "who created you"],
+    keywords: [
+      "your name",
+      "creator",
+      "made you",
+      "built you",
+      "build",
+      "who created you",
+    ],
     response: "I'm a chatbot created by MD Affan Asghar. 😊",
   },
   {
@@ -136,7 +143,14 @@ const responses = [
     response: "My developer is MD Affan Asghar. 🚀",
   },
   {
-    keywords: ["phone number", "contact", "mobile", "phone", "how to contact", "reach affan"],
+    keywords: [
+      "phone number",
+      "contact",
+      "mobile",
+      "phone",
+      "how to contact",
+      "reach affan",
+    ],
     response: "You can contact MD Affan Asghar at 📞 9339828230.",
   },
   {
@@ -148,28 +162,70 @@ const responses = [
     response: "He lives at 🏠 Kankinara, Kolkata, West Bengal.",
   },
   {
-    keywords: ["skills", "expertise", "technologies", "tech stack", "what can affan do"],
+    keywords: [
+      "skills",
+      "expertise",
+      "technologies",
+      "tech stack",
+      "what can affan do",
+    ],
     response:
       "He is skilled in 🔥 Full-Stack Web Development, Node.js, React, Php, MySQL MongoDB, Express.js, JavaScript, HTML, CSS, and more!",
   },
   {
-    keywords: ["projects", "work", "portfolio", "project", "what has affan built"],
+    keywords: [
+      "projects",
+      "work",
+      "portfolio",
+      "project",
+      "what has affan built",
+    ],
     response:
-      "His projects include 🎯 WanderLust-Holidays-Rental-Homes, Full Stack NoHate website, and a Weather App using React,etc. 🚀",
+      "His Full Stack projects include 🎯 WanderLust Holidays-Rental-Homes, NoHate website, and a Weather App using React,etc. 🚀",
+  },
+  {
+    keywords: [
+      "wanderlust",
+      "wanderlust project",
+      "holiday project",
+      "rental homes",
+      "holiday rental",
+    ],
+    response:
+      "WanderLust Holidays-Rental-Homes is a full-stack web application inspired by Airbnb. It allows users to explore, book, and host rental properties with secure authentication, image uploads, filtering, and responsive design. Built using Node.js, Express.js, MongoDB, and EJS for dynamic rendering. 🌍",
+  },
+  {
+    keywords: [
+      "nohate",
+      "no hate",
+      "hate speech",
+      "nohate website",
+      "hate detection project",
+      "anti hate project",
+    ],
+    response:
+      "🛡️ The NoHate website is a full-stack platform built to detect and filter hate speech in user posts. It uses machine learning for content moderation, with a modern frontend in React and backend in Node.js, Express, and MongoDB. It promotes respectful online communication. 💬🚫",
   },
   {
     keywords: ["portfolio", "website", "profile", "personal website"],
-    response: "Check out his portfolio here: 🌐 https://portfolio-affan.netlify.app/.",
+    response:
+      "Check out his portfolio here: 🌐 https://portfolio-affan.netlify.app/.",
   },
   {
-    keywords: ["college", "education", "study", "degree", "where did affan study"],
+    keywords: [
+      "college",
+      "education",
+      "study",
+      "degree",
+      "where did affan study",
+    ],
     response:
-      "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology.",
+      "He is currently pursuing B.Tech in Computer Science Engineering (CSE) at 🏫 Narula Institute of Technology, Kolkata, India.",
   },
   {
     keywords: ["internship", "experience", "job", "work experience"],
     response:
-      "He worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd.",
+      "He is currently working at 🏢 Ecomservices as a Full Stack Web Developer, focusing on scalable and full stack web applications. Previously, he worked as a Web Developer Intern at 💼 Simtrak Solution Pvt Ltd. 🚀",
   },
   {
     keywords: ["final year project", "academic project", "college project"],
@@ -206,33 +262,37 @@ const responses = [
   },
   {
     keywords: ["thank", "thanks", "appreciate"],
-    response: "You're welcome! Let me know if you need anything else about Affan. 😊",
+    response:
+      "You're welcome! Let me know if you need anything else about Affan. 😊",
   },
 ];
 
 function findBestResponse(userMessage) {
   userMessage = userMessage.toLowerCase();
-  
+
   // First check for exact matches
   for (let entry of responses) {
-    if (entry.keywords.some(keyword => 
-      userMessage === keyword || 
-      userMessage.includes(keyword) ||
-      new RegExp(`\\b${keyword}\\b`).test(userMessage)
-    )) {
+    if (
+      entry.keywords.some(
+        (keyword) =>
+          userMessage === keyword ||
+          userMessage.includes(keyword) ||
+          new RegExp(`\\b${keyword}\\b`).test(userMessage)
+      )
+    ) {
       return entry.response;
     }
   }
-  
+
   // Then check for partial matches
   let bestMatch = null;
   let highestMatchCount = 0;
 
   for (let entry of responses) {
-    let matchCount = entry.keywords.filter(keyword => 
+    let matchCount = entry.keywords.filter((keyword) =>
       userMessage.includes(keyword)
     ).length;
-    
+
     if (matchCount > highestMatchCount) {
       highestMatchCount = matchCount;
       bestMatch = entry.response;
@@ -246,41 +306,46 @@ function findBestResponse(userMessage) {
 async function callDeepSeekAPI(userMessage) {
   // Don't call API for simple greetings or common questions
   const simpleQuestions = ["hi", "hello", "hey", "bye", "thank"];
-  if (simpleQuestions.some(q => userMessage.toLowerCase().includes(q))) {
+  if (simpleQuestions.some((q) => userMessage.toLowerCase().includes(q))) {
     return null;
   }
 
   try {
-    const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer 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",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "deepseek-chat",
-        messages: [
-          {
-            role: "system",
-            content: "You are an assistant that answers questions specifically about MD Affan Asghar, a Full Stack Developer. Keep responses brief (1-2 sentences max) and relevant to Affan's skills, projects, education, or contact info. If the question isn't about Affan, politely decline to answer."
-          },
-          { 
-            role: "user", 
-            content: userMessage 
-          }
-        ],
-        temperature: 0.3, // Lower temperature for more focused answers
-        max_tokens: 100
-      }),
-      timeout: 5000 // Add timeout
-    });
+    const response = await fetch(
+      "https://api.deepseek.com/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization:
+            "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",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "deepseek-chat",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are an assistant that answers questions specifically about MD Affan Asghar, a Full Stack Developer. Keep responses brief (1-2 sentences max) and relevant to Affan's skills, projects, education, or contact info. If the question isn't about Affan, politely decline to answer.",
+            },
+            {
+              role: "user",
+              content: userMessage,
+            },
+          ],
+          temperature: 0.3, // Lower temperature for more focused answers
+          max_tokens: 100,
+        }),
+        timeout: 5000, // Add timeout
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`API request failed with status ${response.status}`);
     }
 
     const data = await response.json();
-    
+
     if (!data.choices?.[0]?.message?.content) {
       throw new Error("Invalid API response structure");
     }
@@ -321,14 +386,18 @@ function sendMessage() {
       // If no local match found, try API
       if (!botResponse) {
         const apiResponse = await callDeepSeekAPI(message);
-        botResponse = apiResponse || 
+        botResponse =
+          apiResponse ||
           "I'm designed to answer questions about MD Affan Asghar. Could you ask something specific about his skills, projects, or contact information?";
       }
 
       addMessage(botResponse, "bot-message");
     } catch (error) {
       console.error("Error generating response:", error);
-      addMessage("I'm having some trouble right now. Please try asking something specific about Affan's skills or projects.", "bot-message");
+      addMessage(
+        "I'm having some trouble right now. Please try asking something specific about Affan's skills or projects.",
+        "bot-message"
+      );
     }
   }, 1500);
 }
@@ -343,17 +412,17 @@ function addMessage(text, className) {
   const messageContainer = document.getElementById("chatbotMessages");
   const messageDiv = document.createElement("div");
   messageDiv.className = className;
-  
+
   // Handle newlines in responses
-  if (typeof text === 'string' && text.includes('\n')) {
-    text.split('\n').forEach((line, i) => {
-      if (i > 0) messageDiv.appendChild(document.createElement('br'));
+  if (typeof text === "string" && text.includes("\n")) {
+    text.split("\n").forEach((line, i) => {
+      if (i > 0) messageDiv.appendChild(document.createElement("br"));
       messageDiv.appendChild(document.createTextNode(line));
     });
   } else {
     messageDiv.textContent = text;
   }
-  
+
   messageContainer.appendChild(messageDiv);
   messageContainer.scrollTop = messageContainer.scrollHeight;
 }
