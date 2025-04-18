@@ -1897,6 +1897,7 @@ div#count {
 @media (max-width: 768px) {
   .portfolio-section {
     flex-direction: column;
+    margin: 20px;
   }
 
   .portfolio-video-container {
