@@ -44,7 +44,6 @@ In summary, my personal portfolio website is more than just a digital resume –
 ![8](https://github.com/affancoder/Portfolio_Website/assets/113276865/f0aa1f0b-7f93-4bf4-9d23-f18bdc4f1c3c)
 ![9](https://github.com/affancoder/Portfolio_Website/assets/113276865/e243c597-df7b-4257-8826-2849e1d370ea)
 ![10](https://github.com/affancoder/Portfolio_Website/assets/113276865/6a9d64b0-13c9-44a8-90b2-56621d881bee)
-![11](https://github.com/affancoder/Portfolio_Website/assets/113276865/295bf129-924e-4db7-b988-b620311a8487)
 ![12](https://github.com/affancoder/Portfolio_Website/assets/113276865/0e1ea616-f8c1-4b9b-84d4-a41ea8feb1bb)
 ![13](https://github.com/affancoder/Portfolio_Website/assets/113276865/9a2c6c64-eedc-4eb8-8aeb-d07fa25eef15)
 ![14](https://github.com/user-attachments/assets/115aedad-0556-4fe2-93f6-32e68022e9fd)
